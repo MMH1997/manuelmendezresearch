@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic website of Manuel Méndez Hurtado, researcher and lecturer at Universidad Complutense de Madrid.">
+  <meta name="theme-color" content="#101b2b">
+  <title>Manuel Méndez Hurtado | Academic Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Home"><span class="brand-mark">M</span><span>Manuel Méndez Hurtado</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#projects">Projects</a><a href="#contact" class="nav-contact">Contact ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Academic · Researcher · Lecturer</p>
+          <h1>Building more <span class="accent">reliable</span> and <span class="accent">understandable</span> AI.</h1>
+          <p class="hero-lead">I am a researcher and lecturer at Universidad Complutense de Madrid (UCM). My work explores software testing for machine learning, explainable AI, anomaly detection and trustworthy data-driven systems.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#publications">Explore publications <span>↘</span></a>
+            <a class="button button-secondary" href="#contact">Get in touch</a>
+          </div>
+          <div class="hero-links" aria-label="Academic profiles">
+            <!-- Replace # with your real profile URLs -->
+            <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+            <a href="https://orcid.org/" target="_blank" rel="noreferrer">ORCID ↗</a>
+            <a href="https://dblp.org/" target="_blank" rel="noreferrer">DBLP ↗</a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Profile summary">
+          <div class="profile-orbit"><div class="profile-initials">MMH</div><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span></div>
+          <p class="card-label">CURRENT POSITION</p>
+          <h2>Profesor Ayudante Doctor</h2>
+          <p class="muted">Universidad Complutense de Madrid</p>
+          <div class="card-rule"></div>
+          <p class="card-label">RESEARCH INTERESTS</p>
+          <div class="tag-list"><span>Metamorphic Testing</span><span>Explainable AI</span><span>Anomaly Detection</span><span>Machine Learning</span></div>
+          <p class="card-foot"><span class="mini-dot"></span> Madrid, Spain</p>
+        </aside>
+      </div>
+      <div class="hero-bottom container"><span>RESEARCH WITH RIGOUR</span><span class="hero-line"></span><span>ENGINEERING TRUSTWORTHY AI</span></div>
+    </section>
+
+    <section class="section section-light" id="about">
+      <div class="container split-layout">
+        <div><p class="eyebrow eyebrow-dark">01 / ABOUT</p><h2 class="section-title">A little about me<span class="accent">.</span></h2></div>
+        <div class="section-copy">
+          <p class="large-copy">I work at the intersection of software engineering and artificial intelligence, with a particular interest in how we can test, evaluate and explain machine-learning systems.</p>
+          <p>I am a <strong>Profesor Ayudante Doctor</strong> at the <strong>Universidad Complutense de Madrid (UCM)</strong>, where I teach programming in the Data Science degree and contribute to research activities in software quality and AI.</p>
+          <p>My research combines empirical evaluation, testing techniques and interpretable models to better understand when machine-learning systems behave as expected—and when they do not.</p>
+          <a class="text-link" href="#contact">Would you like to collaborate? <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">02 / RESEARCH</p><h2 class="section-title">Research directions<span class="accent">.</span></h2></div><p class="section-intro">Methods and tools for making AI systems more robust, transparent and dependable.</p></div>
+        <div class="research-grid">
+          <article class="research-card"><div class="number">01</div><div class="research-icon">↻</div><h3>Metamorphic Testing</h3><p>Testing machine-learning systems when a complete test oracle is unavailable, using relations between inputs and expected outputs to reveal unexpected behaviour.</p><div class="card-keywords">Software testing · Robustness · Test oracles</div></article>
+          <article class="research-card"><div class="number">02</div><div class="research-icon">◇</div><h3>Explainable AI</h3><p>Developing and evaluating ways to describe feature contributions and interactions in predictive models, including tree-based methods.</p><div class="card-keywords">XAI · Feature interactions · Interpretability</div></article>
+          <article class="research-card"><div class="number">03</div><div class="research-icon">⌁</div><h3>Anomaly Detection</h3><p>Studying the behaviour and reliability of unsupervised and semi-supervised methods under data transformations and changing conditions.</p><div class="card-keywords">Unsupervised learning · Evaluation · Stability</div></article>
+          <article class="research-card"><div class="number">04</div><div class="research-icon">⌘</div><h3>Trustworthy Machine Learning</h3><p>Empirical assessment of data-driven systems, including robustness, data quality, imputation and applications in cybersecurity.</p><div class="card-keywords">Data quality · Reliability · Cybersecurity</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="publications">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow eyebrow-dark">03 / SELECTED WORK</p><h2 class="section-title">Selected publications<span class="accent">.</span></h2></div><p class="section-intro">A short selection. See the linked bibliographic profiles for the complete and up-to-date list.</p></div>
+        <div class="publication-list">
+          <article class="publication">
+            <div class="pub-year">2026</div><div class="pub-content"><p class="pub-type">Journal article · Accepted</p><h3>Combining a novel metric and categorical boosting to better estimate rare events likelihood: Use in traffic accidents</h3><p class="pub-venue">Applied Soft Computing</p><p class="pub-note">Add the final author list, DOI and publisher link when available.</p></div><a class="pub-arrow" href="https://scholar.google.com/" aria-label="Find publication">↗</a>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2026</div><div class="pub-content"><p class="pub-type">Conference paper</p><h3>Autonomous AI-Driven Pentesting Agent for Healthcare Systems Security</h3><p class="pub-venue">Add conference or proceedings details</p><p class="pub-note">Add the DOI or proceedings URL once confirmed.</p></div><a class="pub-arrow" href="https://dblp.org/" aria-label="Find publication">↗</a>
+          </article>
+          <article class="publication publication-placeholder">
+            <div class="pub-year">—</div><div class="pub-content"><p class="pub-type">Research line</p><h3>Metamorphic testing for machine-learning systems</h3><p class="pub-venue">Add your relevant papers, venues and links</p><p class="pub-note">Replace this entry with a specific publication before launch.</p></div><span class="pub-arrow" aria-hidden="true">＋</span>
+          </article>
+        </div>
+        <div class="center-action"><a class="button button-dark" href="https://dblp.org/" target="_blank" rel="noreferrer">Browse full publication list ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">04 / PROJECTS</p><h2 class="section-title">Research projects<span class="accent">.</span></h2></div><p class="section-intro">Collaborative research on software engineering, data science and intelligent systems.</p></div>
+        <div class="project-grid">
+          <article class="project-card"><p class="project-kicker">RESEARCH PROJECT</p><h3>FORTE-CM</h3><p>Add a concise description of the project's objectives and your contribution.</p><span class="project-status">Project details to complete</span></article>
+          <article class="project-card"><p class="project-kicker">RESEARCH PROJECT</p><h3>AwESOMe</h3><p>Project reference: PID2021-122215NB-C31. Add the official project page and your role.</p><span class="project-status">Project details to complete</span></article>
+          <article class="project-card"><p class="project-kicker">RESEARCH PROJECT</p><h3>DESAFÍO-CM</h3><p>Project reference: TEC-2024/COM-235. Add a short summary and official link.</p><span class="project-status">Project details to complete</span></article>
+          <article class="project-card"><p class="project-kicker">RESEARCH PROJECT</p><h3>NEXUS</h3><p>Project reference: PID2025-168053OB-I00. Add the official project page and your contribution.</p><span class="project-status">Project details to complete</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="teaching">
+      <div class="container split-layout">
+        <div><p class="eyebrow eyebrow-dark">05 / TEACHING</p><h2 class="section-title">Teaching & supervision<span class="accent">.</span></h2></div>
+        <div class="section-copy">
+          <p class="large-copy">Helping students build solid foundations in programming and data science.</p>
+          <div class="teaching-item"><span class="teaching-year">UCM</span><div><h3>Programación I</h3><p>Grado en Ciencia de Datos · Python programming fundamentals, control flow, functions and testing.</p></div></div>
+          <div class="teaching-item"><span class="teaching-year">UCM</span><div><h3>Student supervision</h3><p>TFG/TFM supervision and research projects. Add current topics, public resources and supervision details where appropriate.</p></div></div>
+          <p class="small-note">Only publish teaching materials and student information that you are authorised to share.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div><p class="eyebrow">06 / CONTACT</p><h2 class="section-title">Let's connect<span class="accent">.</span></h2><p class="contact-lead">Interested in research collaboration, a publication, or a shared project? Feel free to get in touch.</p></div>
+        <div class="contact-panel"><p class="card-label">ACADEMIC CONTACT</p><h3>Manuel Méndez Hurtado</h3><p>Universidad Complutense de Madrid</p><a class="contact-link" href="mailto:REPLACE_WITH_YOUR_UCM_EMAIL">REPLACE_WITH_YOUR_UCM_EMAIL <span>↗</span></a><div class="contact-socials"><a href="https://orcid.org/">ORCID ↗</a><a href="https://scholar.google.com/">Google Scholar ↗</a><a href="https://github.com/">GitHub ↗</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Manuel Méndez Hurtado</span><span>Designed for research, built for the web.</span><a href="#home">Back to top ↑</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
