@@ -237,3 +237,30 @@ h1 { max-width: 720px; margin-bottom: 24px; font-size: clamp(2.8rem, 5.6vw, 5.25
 .teaching-group .teaching-item { padding: 18px 0; }
 .teaching-item h3 { margin-bottom: 6px; }
 .teaching-item p { margin-bottom: 0; }
+
+
+/* Profile photo */
+.profile-orbit {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 50%;
+  border: 3px solid var(--teal);
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
