@@ -1158,3 +1158,358 @@ h1 {
 }
 
 
+/* =========================================
+   ACADEMIC GALLERY
+   ========================================= */
+
+.gallery-hero {
+    padding: 100px 24px 80px;
+    background:
+        radial-gradient(ellipse at 80% 20%, rgba(45, 212, 191, 0.12), transparent 42%),
+        var(--background, #0b1120);
+}
+
+.gallery-hero-content,
+.gallery-section,
+.gallery-closing {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.gallery-hero-content {
+    max-width: 850px;
+}
+
+.gallery-hero .eyebrow,
+.gallery-kicker {
+    color: var(--accent, #5eead4);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.gallery-hero h1 {
+    margin: 18px 0;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.gallery-hero h1 span {
+    color: var(--accent, #5eead4);
+}
+
+.gallery-hero p {
+    max-width: 650px;
+    color: var(--muted, #a8b3c7);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.gallery-section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+.gallery-section-alt {
+    width: 100%;
+    padding-inline: max(24px, calc((100% - 1120px) / 2));
+    background: rgba(148, 163, 184, 0.045);
+}
+
+.gallery-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.gallery-heading h2 {
+    margin: 12px 0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: -0.035em;
+}
+
+.gallery-heading p {
+    max-width: 650px;
+    margin: 0;
+    color: var(--muted, #a8b3c7);
+    line-height: 1.7;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.gallery-card {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.17);
+    border-radius: 16px;
+    background: var(--card-bg, #111827);
+    transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(94, 234, 212, 0.5);
+}
+
+.gallery-image-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: #080d18;
+    cursor: zoom-in;
+    text-align: left;
+}
+
+.gallery-image-button img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 250ms ease, opacity 250ms ease;
+}
+
+.gallery-card-wide .gallery-image-button img {
+    height: 350px;
+}
+
+.gallery-card:hover .gallery-image-button img {
+    transform: scale(1.025);
+    opacity: 0.9;
+}
+
+.gallery-zoom {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background: rgba(10, 15, 28, 0.8);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.gallery-card figcaption {
+    padding: 22px;
+}
+
+.photo-category {
+    color: var(--accent, #5eead4);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.gallery-card h3 {
+    margin: 10px 0 8px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.gallery-card figcaption p {
+    margin: 0;
+    color: var(--muted, #a8b3c7);
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+.gallery-closing {
+    padding-top: 90px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.gallery-closing .eyebrow {
+    color: var(--accent, #5eead4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.gallery-closing h2 {
+    margin: 16px 0 24px;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.gallery-contact-link {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    color: var(--accent, #5eead4);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.gallery-contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Full-screen image viewer */
+
+.gallery-lightbox {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 60px 24px;
+    background: rgba(3, 7, 18, 0.96);
+}
+
+.gallery-lightbox.is-open {
+    display: flex;
+}
+
+.gallery-lightbox figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: min(1000px, 80vw);
+    max-height: 100%;
+    margin: 0;
+}
+
+.gallery-lightbox figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.gallery-lightbox figcaption {
+    color: #f8fafc;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-prev {
+    left: 18px;
+}
+
+.lightbox-next {
+    right: 18px;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(94, 234, 212, 0.18);
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+    .gallery-card-wide {
+        grid-column: span 2;
+    }
+
+    .gallery-card-wide .gallery-image-button img {
+        height: 420px;
+    }
+}
+
+@media (max-width: 650px) {
+    .gallery-hero {
+        padding: 72px 0 55px;
+    }
+
+    .gallery-hero-content,
+    .gallery-section,
+    .gallery-closing {
+        width: calc(100% - 32px);
+    }
+
+    .gallery-section {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    .gallery-section-alt {
+        width: 100%;
+        padding-inline: 16px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-card-wide {
+        grid-column: auto;
+    }
+
+    .gallery-image-button img,
+    .gallery-card-wide .gallery-image-button img {
+        height: 260px;
+    }
+
+    .gallery-card figcaption {
+        padding: 18px;
+    }
+
+    .gallery-lightbox {
+        padding-inline: 12px;
+    }
+
+    .gallery-lightbox figure {
+        max-width: 100%;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+}
+
+
+
