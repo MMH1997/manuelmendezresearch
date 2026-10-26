@@ -1,130 +1,367 @@
 
-<style>
-  .committees-hero {
-    padding: 7rem 1.5rem 4.5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  .committees-hero-content,
-  .committees-wrap {
-    width: min(1100px, 100%);
-    margin: 0 auto;
-  }
+  <meta name="description" content="Program committee memberships and special-session organization by Manuel Méndez Hurtado.">
 
-  .committees-hero h1 {
-    margin: .6rem 0 1rem;
-  }
+  <title>Program Committees | Manuel Méndez Hurtado</title>
 
-  .committees-hero h1 span {
-    color: #55d6c2;
-  }
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 
-  .committees-hero p {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .committees-section {
-    padding: 2.5rem 1.5rem 4rem;
-  }
-
-  .committees-section h2 {
-    margin: 0 0 .6rem;
-  }
-
-  .committees-intro {
-    margin: 0 0 1.8rem;
-  }
-
-  .committee-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
-  }
-
-  .committee-card {
-    position: relative;
-    overflow: hidden;
-    padding: 1.5rem;
-    border: 1px solid rgba(85, 214, 194, .22);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, .025);
-    transition: transform .2s ease, border-color .2s ease;
-  }
-
-  .committee-card::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 3px;
-    background: #55d6c2;
-  }
-
-  .committee-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(85, 214, 194, .5);
-  }
-
-  .committee-card h3 {
-    margin: .55rem 0 .65rem;
-  }
-
-  .committee-card p {
-    margin: .4rem 0;
-  }
-
-  .committee-type {
-    font-size: .74rem;
-    letter-spacing: .12em;
-    font-weight: 800;
-    color: #55d6c2;
-  }
-
-  .committee-meta {
-    font-size: .92rem;
-    opacity: .82;
-  }
-
-  .committee-link {
-    display: inline-flex;
-    align-items: center;
-    gap: .4rem;
-    margin-top: .9rem;
-    padding: .55rem .8rem;
-    border-radius: 6px;
-    color: #55d6c2;
-    border: 1px solid rgba(85, 214, 194, .35);
-    text-decoration: none;
-    font-size: .88rem;
-    font-weight: 700;
-    transition: background .2s ease;
-  }
-
-  .committee-link:hover {
-    background: rgba(85, 214, 194, .08);
-  }
-
-  .special-session {
-    margin-top: 2rem;
-    padding: 1.8rem;
-    border-radius: 12px;
-    border: 1px solid rgba(85, 214, 194, .25);
-    background: rgba(255, 255, 255, .025);
-  }
-
-  .special-session h3 {
-    margin: .55rem 0 .7rem;
-  }
-
-  @media (max-width: 700px) {
-    .committee-grid {
-      grid-template-columns: 1fr;
-    }
-
+  <style>
     .committees-hero {
-      padding-top: 5.5rem;
+      padding: 7rem 1.5rem 4.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-  }
-</style>
+
+    .committees-hero-content,
+    .committees-wrap {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+    }
+
+    .committees-hero h1 {
+      margin: .6rem 0 1rem;
+    }
+
+    .committees-hero h1 span {
+      color: #55d6c2;
+    }
+
+    .committees-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .committees-section {
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .committees-section h2 {
+      margin: 0 0 .6rem;
+    }
+
+    .committees-intro {
+      margin: 0 0 1.8rem;
+    }
+
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .committee-card {
+      position: relative;
+      overflow: hidden;
+      padding: 1.5rem;
+      border: 1px solid rgba(85, 214, 194, .22);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .025);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .committee-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 3px;
+      background: #55d6c2;
+    }
+
+    .committee-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(85, 214, 194, .5);
+    }
+
+    .committee-card h3 {
+      margin: .55rem 0 .65rem;
+    }
+
+    .committee-card p {
+      margin: .4rem 0;
+    }
+
+    .committee-type {
+      font-size: .74rem;
+      letter-spacing: .12em;
+      font-weight: 800;
+      color: #55d6c2;
+    }
+
+    .committee-meta {
+      font-size: .92rem;
+      opacity: .82;
+    }
+
+    .committee-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      margin-top: .9rem;
+      padding: .55rem .8rem;
+      border-radius: 6px;
+      color: #55d6c2;
+      border: 1px solid rgba(85, 214, 194, .35);
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 700;
+      transition: background .2s ease;
+    }
+
+    .committee-link:hover {
+      background: rgba(85, 214, 194, .08);
+    }
+
+    .special-session {
+      margin-top: 2rem;
+      padding: 1.8rem;
+      border-radius: 12px;
+      border: 1px solid rgba(85, 214, 194, .25);
+      background: rgba(255, 255, 255, .025);
+    }
+
+    .special-session h3 {
+      margin: .55rem 0 .7rem;
+    }
+
+    @media (max-width: 700px) {
+      .committee-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .committees-hero {
+        padding-top: 5.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+
+      <a class="brand" href="index.html">
+        MMH<span>.</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Projects</a>
+        <a href="awards.html">Awards</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="committees.html" class="active" aria-current="page">Committees</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="committees-hero">
+      <div class="committees-hero-content">
+
+        <span class="eyebrow">SCIENTIFIC SERVICE</span>
+
+        <h1>
+          Program <span>Committees</span>
+        </h1>
+
+        <p>
+          Service to the research community through international
+          conference program committees and special-session organization.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Program committee memberships -->
+    <section class="committees-section">
+      <div class="committees-wrap">
+
+        <h2>Program Committee Memberships</h2>
+
+        <p class="committees-intro">
+          International conferences where I have served as a member
+          of the program committee.
+        </p>
+
+        <div class="committee-grid">
+
+          <!-- ICCCI 2025 -->
+          <article class="committee-card">
+            <span class="committee-type">PROGRAM COMMITTEE</span>
+
+            <h3>
+              17th International Conference on Computational
+              Collective Intelligence (ICCCI 2025)
+            </h3>
+
+            <p class="committee-meta">
+              November 2025 · Ho Chi Minh City, Vietnam
+            </p>
+
+            <a
+              class="committee-link"
+              href="https://iccci.pwr.edu.pl/2025/committee-program.php"
+              target="_blank"
+              rel="noopener noreferrer">
+              Conference website <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- SGSOACS 2025 -->
+          <article class="committee-card">
+            <span class="committee-type">PROGRAM COMMITTEE</span>
+
+            <h3>
+              11th Spanish-German Symposium on Applied
+              Computer Science (SGSOACS 2025)
+            </h3>
+
+            <p class="committee-meta">
+              June 2025 · Vienna, Austria
+            </p>
+
+            <a
+              class="committee-link"
+              href="https://sgsoacs.eu/past-events/sgsoacs2025/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Conference website <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- ACIIDS 2025 -->
+          <article class="committee-card">
+            <span class="committee-type">PROGRAM COMMITTEE</span>
+
+            <h3>
+              19th Asian Conference on Intelligent Information
+              and Database Systems (ACIIDS 2025)
+            </h3>
+
+            <p class="committee-meta">
+              June 2025 · Tokyo, Japan
+            </p>
+
+            <a
+              class="committee-link"
+              href="https://aciids.pwr.edu.pl/2025/committees-program.php"
+              target="_blank"
+              rel="noopener noreferrer">
+              Program committee <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- ICCCI 2024 -->
+          <article class="committee-card">
+            <span class="committee-type">PROGRAM COMMITTEE</span>
+
+            <h3>
+              International Conference on Computational
+              Collective Intelligence (ICCCI 2024)
+            </h3>
+
+            <p class="committee-meta">
+              September 2024 · Leipzig, Germany
+            </p>
+
+            <a
+              class="committee-link"
+              href="https://iccci.pwr.edu.pl/2024/committee-program.php"
+              target="_blank"
+              rel="noopener noreferrer">
+              Conference website <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- ICCCI 2023 -->
+          <article class="committee-card">
+            <span class="committee-type">PROGRAM COMMITTEE</span>
+
+            <h3>
+              15th International Conference on Computational
+              Collective Intelligence (ICCCI 2023)
+            </h3>
+
+            <p class="committee-meta">
+              September 2023 · Budapest, Hungary
+            </p>
+
+            <a
+              class="committee-link"
+              href="https://iccci.pwr.edu.pl/2023/committee-program.php"
+              target="_blank"
+              rel="noopener noreferrer">
+              Conference website <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Special session -->
+        <div class="special-session">
+
+          <span class="committee-type">
+            SPECIAL SESSION ORGANIZATION
+          </span>
+
+          <h3>
+            EvoMLTest: Application of Evolutionary Computation
+            and Machine Learning to Testing
+          </h3>
+
+          <p>
+            Special session organized at the 19th Asian Conference
+            on Intelligent Information and Database Systems
+            (ACIIDS 2025).
+          </p>
+
+          <p class="committee-meta">
+            June 2025 · Tokyo, Japan
+          </p>
+
+          <a
+            class="committee-link"
+            href="https://aciids.pwr.edu.pl/2025/sessions.php"
+            target="_blank"
+            rel="noopener noreferrer">
+            Special session details <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © 2026 Manuel Méndez Hurtado · Universidad Complutense de Madrid
+    </p>
+  </footer>
+
+</body>
+</html>
