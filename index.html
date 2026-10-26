@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic website of Manuel Méndez Hurtado, researcher and lecturer at Universidad Complutense de Madrid.">
+  <meta name="description" content="Academic profile of Manuel Méndez Hurtado, researcher and lecturer at Universidad Complutense de Madrid.">
   <meta name="theme-color" content="#101b2b">
-  <title>Manuel Méndez Hurtado | Academic Website</title>
+  <title>Home | Manuel Méndez Hurtado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,36 +13,34 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Home">
+      <a class="brand" href="index.html" aria-label="Home">
         <span class="brand-mark">M</span>
         <span>Manuel Méndez Hurtado</span>
       </a>
       <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
       <div class="nav-links" id="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact" class="nav-contact">Contact ↗</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Projects</a>
+        <a href="awards.html">Awards</a>
+        <a href="contact.html" class="nav-contact">Contact ↗</a>
       </div>
     </nav>
   </header>
-
   <main id="main">
-    <section class="hero section" id="home">
+<section class="hero section" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow"><span class="status-dot"></span> Manuel Méndez Hurtado </p>
           <h1>Research <span class="accent">&</span> Lecturer <span class="accent"> at </span> UCM </h1>
           <p class="hero-lead">My research focuses on software testing and explainable artificial intelligence, with contributions to metamorphic testing, machine learning and anomaly detection.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#publications">Explore publications <span>↘</span></a>
-            <a class="button button-secondary" href="#contact">Get in touch</a>
+            <a class="button button-primary" href="publications.html">Explore publications <span>↘</span></a>
+            <a class="button button-secondary" href="contact.html">Get in touch</a>
           </div>
           <div class="hero-links" aria-label="Academic profiles">
             <a href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer">Google Scholar ↗</a>
@@ -80,7 +78,7 @@
       </div>
     </section>
 
-    <section class="section section-light" id="about">
+<section class="section section-light" id="about">
       <div class="container split-layout">
         <div>
           <p class="eyebrow eyebrow-dark">01 / ABOUT</p>
@@ -90,300 +88,18 @@
           <p class="large-copy">I work at the intersection of software engineering and artificial intelligence, with a particular interest in how we can test, evaluate and explain machine-learning systems.</p>
           <p>I am a <strong>Profesor Ayudante Doctor</strong> at the <strong>Universidad Complutense de Madrid (UCM)</strong>, where I teach programming in the Data Science degree and contribute to research in software quality and artificial intelligence.</p>
           <p>My research combines empirical evaluation, testing techniques and interpretable models to better understand when machine-learning systems behave as expected—and when they do not.</p>
-          <a class="text-link" href="#contact">Would you like to collaborate? <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="research">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">02 / RESEARCH</p>
-            <h2 class="section-title">Research directions<span class="accent">.</span></h2>
-          </div>
-          <p class="section-intro">Methods and tools for making AI systems more robust, transparent and dependable.</p>
-        </div>
-        <div class="research-grid">
-          <article class="research-card">
-            <div class="number">01</div><div class="research-icon">↻</div>
-            <h3>Metamorphic Testing</h3>
-            <p>Testing machine-learning systems when a complete test oracle is unavailable, using relations between inputs and expected outputs to reveal unexpected behaviour.</p>
-            <div class="card-keywords">Software testing · Robustness · Test oracles</div>
-          </article>
-          <article class="research-card">
-            <div class="number">02</div><div class="research-icon">◇</div>
-            <h3>Explainable AI</h3>
-            <p>Developing and evaluating ways to describe feature contributions and interactions in predictive models, including tree-based methods.</p>
-            <div class="card-keywords">XAI · Feature interactions · Interpretability</div>
-          </article>
-          <article class="research-card">
-            <div class="number">03</div><div class="research-icon">⌁</div>
-            <h3>Anomaly Detection</h3>
-            <p>Studying the behaviour and reliability of unsupervised methods under data transformations and changing conditions.</p>
-            <div class="card-keywords">Unsupervised learning · Evaluation · Stability</div>
-          </article>
-          <article class="research-card">
-            <div class="number">04</div><div class="research-icon">⌘</div>
-            <h3>Trustworthy Machine Learning</h3>
-            <p>Empirical assessment of data-driven systems, including robustness, data quality, imputation and applications in cybersecurity.</p>
-            <div class="card-keywords">Data quality · Reliability · Cybersecurity</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light" id="publications">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow eyebrow-dark">03 / SELECTED WORK</p>
-            <h2 class="section-title">Selected publications<span class="accent">.</span></h2>
-          </div>
-          <p class="section-intro">Selected journal articles and research papers. Visit Google Scholar for citation counts and the complete publication record.</p>
-        </div>
-
-        <div class="publication-list">
-          <article class="publication">
-            <div class="pub-year">2026</div>
-            <div class="pub-content">
-              <p class="pub-type">Journal article</p>
-              <h3>Combining a novel metric and categorical boosting to better estimate rare event likelihood: Use in traffic accidents</h3>
-              <p class="pub-venue"><em>Applied Soft Computing</em></p>
-            </div>
-            <a class="pub-arrow" href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer" aria-label="Find publication on Google Scholar">↗</a>
-          </article>
-
-          <article class="publication">
-            <div class="pub-year">2024</div>
-            <div class="pub-content">
-              <p class="pub-type">Journal article</p>
-              <h3>Combining Metamorphic Testing and Machine Learning to Enhance OpenStreetMap</h3>
-              <p class="pub-venue"><em>IEEE Transactions on Reliability</em>, 73(4), 1834–1848</p>
-            </div>
-            <a class="pub-arrow" href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer" aria-label="Find publication on Google Scholar">↗</a>
-          </article>
-
-          <article class="publication">
-            <div class="pub-year">2023</div>
-            <div class="pub-content">
-              <p class="pub-type">Journal article · Survey</p>
-              <h3>Machine learning algorithms to forecast air quality: a survey</h3>
-              <p class="pub-venue"><em>Artificial Intelligence Review</em>, 56(9), 10031–10066</p>
-            </div>
-            <a class="pub-arrow" href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer" aria-label="Find publication on Google Scholar">↗</a>
-          </article>
-
-          <article class="publication">
-            <div class="pub-year">2023</div>
-            <div class="pub-content">
-              <p class="pub-type">Journal article</p>
-              <h3>Long-term traffic flow forecasting using a hybrid CNN-BiLSTM model</h3>
-              <p class="pub-venue"><em>Engineering Applications of Artificial Intelligence</em>, 121, 106041</p>
-            </div>
-            <a class="pub-arrow" href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer" aria-label="Find publication on Google Scholar">↗</a>
-          </article>
-
-          <article class="publication">
-            <div class="pub-year">2023</div>
-            <div class="pub-content">
-              <p class="pub-type">Journal article</p>
-              <h3>Metamorphic testing of chess engines</h3>
-              <p class="pub-venue"><em>Information and Software Technology</em>, 162, 107263</p>
-            </div>
-            <a class="pub-arrow" href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer" aria-label="Find publication on Google Scholar">↗</a>
-          </article>
-
-          <article class="publication">
-            <div class="pub-year">2026</div>
-            <div class="pub-content">
-              <p class="pub-type">Journal article</p>
-              <h3>Using transformers to learn system models</h3>
-              <p class="pub-venue"><em>Applied Intelligence</em>, 56(3)</p>
-            </div>
-            <a class="pub-arrow" href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer" aria-label="Find publication on Google Scholar">↗</a>
-          </article>
-        </div>
-
-        <div class="center-action">
-          <a class="button button-dark" href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer">Full publication list &amp; citations ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">04 / PROJECTS</p>
-            <h2 class="section-title">Research projects<span class="accent">.</span></h2>
-          </div>
-          <p class="section-intro">Research projects and collaborations.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <p class="project-kicker">RESEARCH PROJECT</p>
-            <h3>FORTE-CM</h3>
-          </article>
-          <article class="project-card">
-            <p class="project-kicker">RESEARCH PROJECT</p>
-            <h3>AwESOMe</h3>
-            <p>PID2021-122215NB-C31</p>
-          </article>
-          <article class="project-card">
-            <p class="project-kicker">RESEARCH PROJECT</p>
-            <h3>DESAFÍO-CM</h3>
-            <p>TEC-2024/COM-235</p>
-          </article>
-          <article class="project-card">
-            <p class="project-kicker">RESEARCH PROJECT</p>
-            <h3>NEXUS</h3>
-            <p>PID2025-168053OB-I00</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light" id="teaching">
-      <div class="container split-layout">
-        <div>
-          <p class="eyebrow eyebrow-dark">05 / TEACHING</p>
-          <h2 class="section-title">Teaching &amp; supervision<span class="accent">.</span></h2>
-        </div>
-        <div class="section-copy">
-          <p class="large-copy">University teaching in programming at Universidad Complutense de Madrid.</p>
-
-          <div class="teaching-group">
-            <p class="project-kicker">CURRENT TEACHING · 2026–2027</p>
-            <div class="teaching-item">
-              <span class="teaching-year">2026–27</span>
-              <div>
-                <h3>Programación I</h3>
-                <p>1st year · Degree in Applied Data Science · 6 ECTS</p>
-              </div>
-            </div>
-            <div class="teaching-item">
-              <span class="teaching-year">2026–27</span>
-              <div>
-                <h3>Informática I</h3>
-                <p>1st year · Degrees in Mathematics · 1 ECTS</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="teaching-group">
-            <p class="project-kicker">PREVIOUS TEACHING</p>
-            <div class="teaching-item">
-              <span class="teaching-year">2025–26</span>
-              <div>
-                <h3>Tecnología de la Programación I</h3>
-                <p>Computer Engineering and Computer Engineering degree programmes · 150 hours (theory and practical classes)</p>
-              </div>
-            </div>
-            <div class="teaching-item">
-              <span class="teaching-year">2024–25</span>
-              <div>
-                <h3>Tecnología de la Programación I</h3>
-                <p>Computer Engineering and Computer Engineering degree programmes · 120 hours (theory and practical classes)</p>
-              </div>
-            </div>
-            <div class="teaching-item">
-              <span class="teaching-year">2024–25</span>
-              <div>
-                <h3>Tecnología de la Programación II</h3>
-                <p>Computer Engineering and Computer Engineering degree programmes · 60 hours (practical classes)</p>
-              </div>
-            </div>
-            <div class="teaching-item">
-              <span class="teaching-year">2023–24</span>
-              <div>
-                <h3>Fundamentos de Programación II</h3>
-                <p>Practical classes · 30 hours</p>
-              </div>
-            </div>
-            <div class="teaching-item">
-              <span class="teaching-year">2022–23</span>
-              <div>
-                <h3>Fundamentos de Programación I</h3>
-                <p>Practical classes · 30 hours</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="supervision-stat">
-            <div>
-              <h3>17 TFG and TFM projects supervised</h3>
-              <p>Undergraduate and master's final projects.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="awards">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">06 / RECOGNITION</p>
-            <h2 class="section-title">Awards &amp; honours<span class="accent">.</span></h2>
-          </div>
-          <p class="section-intro">Recognition for doctoral research and conference research contributions.</p>
-        </div>
-        <div class="awards-grid">
-          <article class="award-card">
-            <a class="award-image-link" href="assets/Captura de pantalla 2026-10-26 014344.png" target="_blank" rel="noreferrer" aria-label="View doctoral award notice">
-              <img class="award-image award-document" src="assets/Captura de pantalla 2026-10-26 014344.png" alt="Official UCM bulletin excerpt listing Manuel Méndez Hurtado for the Faculty of Informatics Extraordinary Doctoral Award for 2023–2024">
-            </a>
-            <div class="award-content">
-              <p class="project-kicker">DOCTORAL DISTINCTION · 2023–2024</p>
-              <h3>Premio Extraordinario de Doctorado</h3>
-              <p>Faculty of Informatics, Universidad Complutense de Madrid.</p>
-            </div>
-          </article>
-          <article class="award-card">
-            <a class="award-image-link" href="assets/ACIIDS2022_BestPaperAward.jpg" target="_blank" rel="noreferrer" aria-label="View ACIIDS 2022 Best Regular Paper Award certificate">
-              <img class="award-image" src="assets/ACIIDS2022_BestPaperAward.jpg" alt="Best Regular Paper Award certificate from ACIIDS 2022 for Using Deep Transformer Based Models to Predict Ozone Levels, awarded to Manuel Méndez, Carlos Montero and Manuel Núñez">
-            </a>
-            <div class="award-content">
-              <p class="project-kicker">CONFERENCE AWARD · 2022</p>
-              <h3>Best Regular Paper Award</h3>
-              <p>ACIIDS 2022, for “Using Deep Transformer Based Models to Predict Ozone Levels”.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">07 / CONTACT</p>
-          <h2 class="section-title">Let's connect<span class="accent">.</span></h2>
-          <p class="contact-lead">Interested in research collaboration, a publication, or a shared project? Feel free to get in touch.</p>
-        </div>
-        <div class="contact-panel">
-          <p class="card-label">ACADEMIC CONTACT</p>
-          <h3>Manuel Méndez Hurtado</h3>
-          <p>Universidad Complutense de Madrid</p>
-          <a class="contact-link" href="mailto:manumend@ucm.es">manumend@ucm.es <span>↗</span></a>
-          <div class="contact-socials">
-            <a href="https://scholar.google.es/citations?user=avZSGS0AAAAJ&amp;hl=es" target="_blank" rel="noreferrer">Google Scholar ↗</a>
-            <a href="https://dblp.org/pid/335/9551.html" target="_blank" rel="noreferrer">DBLP ↗</a>
-            <a href="https://github.com/MMH1997" target="_blank" rel="noreferrer">GitHub ↗</a>
-          </div>
+          <a class="text-link" href="contact.html">Would you like to collaborate? <span>↗</span></a>
         </div>
       </div>
     </section>
   </main>
- 
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© <span id="year">2026</span> Manuel Méndez Hurtado</span>
-      <span>Designed for research, built for the web.</span>
-      <a href="#home">Back to top ↑</a>
+      <span>Universidad Complutense de Madrid</span>
+      <a href="index.html">Home ↑</a>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
