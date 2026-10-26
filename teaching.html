@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,7 +21,12 @@
         <span class="brand-mark">M</span>
         <span>Manuel Méndez Hurtado</span>
       </a>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+
+      <button class="menu-toggle" id="menu-toggle"
+              aria-expanded="false"
+              aria-controls="nav-links"
+              aria-label="Open navigation">☰</button>
+
       <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -39,32 +43,39 @@
     <section class="section section-light" id="teaching">
       <div class="container split-layout">
 
-        <div>
+        <!-- Left column: doctoral supervision -->
+        <div class="teaching-sidebar">
           <p class="eyebrow eyebrow-dark">05 / TEACHING</p>
-          <h2 class="section-title">Teaching &amp; supervision<span class="accent">.</span></h2>
+          <h2 class="section-title">
+            Teaching &amp; supervision<span class="accent">.</span>
+          </h2>
 
-          <div class="teaching-group">
+          <div class="teaching-group doctoral-group">
             <p class="project-kicker">DOCTORAL CO-SUPERVISION</p>
-            <p>Co-supervision of two doctoral theses with Mercedes G. Merayo.</p>
+            <p class="doctoral-intro">
+              Co-supervision of two doctoral theses with Mercedes G. Merayo.
+            </p>
 
-            <div class="teaching-item">
-              <div>
-                <h3>Rodolfo Bojorque Chasi</h3>
-                <p>Machine Learning Techniques for Sparse Matrices in Educational Analytics and Data Mining</p>
-              </div>
-            </div>
+            <article class="doctoral-item">
+              <h3>Rodolfo Bojorque Chasi</h3>
+              <p>
+                Machine Learning Techniques for Sparse Matrices in
+                Educational Analytics and Data Mining
+              </p>
+            </article>
 
-            <div class="teaching-item">
-              <div>
-                <h3>Manuel Israel del Pino Ochoa</h3>
-                <p>A Study of Bias in Machine Learning Algorithms</p>
-              </div>
-            </div>
+            <article class="doctoral-item">
+              <h3>Manuel Israel del Pino Ochoa</h3>
+              <p>A Study of Bias in Machine Learning Algorithms</p>
+            </article>
           </div>
         </div>
 
-        <div class="section-copy">
-          <p class="large-copy">University teaching in programming at Universidad Complutense de Madrid.</p>
+        <!-- Right column: teaching experience -->
+        <div class="section-copy teaching-main">
+          <p class="large-copy">
+            University teaching in programming at Universidad Complutense de Madrid.
+          </p>
 
           <div class="teaching-group">
             <p class="project-kicker">CURRENT TEACHING · 2026–2027</p>
@@ -149,10 +160,6 @@
       <a href="index.html">Home ↑</a>
     </div>
   </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
 
   <script src="script.js"></script>
 </body>
