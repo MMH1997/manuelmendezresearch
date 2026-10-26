@@ -8,18 +8,55 @@
     <title>Gallery | Manuel Méndez Hurtado</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Títulos de las tarjetas: antes eran oscuros sobre fondo oscuro y apenas se leían */
-        .gallery-card h3 { color: #f8fafc; }
-        /* ICCCI 2026: encuadra al ponente en la franja visible de la tarjeta ancha */
-        .gallery-image-button img.pos-speaker { object-position: 50% 72%; }
-        /* Luang Prabang: muestra la parte de arriba (caras) en vez del centro */
-        .gallery-image-button img.pos-top { object-position: 50% 20%; }
-        /* Tarjeta destacada y centrada; la foto se ve completa, sin recorte */
-        .gallery-card-feature { grid-column: 1 / -1; width: min(100%, 760px); justify-self: center; }
-        .gallery-card-feature .gallery-image-button img { height: auto; aspect-ratio: 16 / 9; }
-        /* Tarjeta suelta centrada (ancho de una columna) */
-        .gallery-card-center { grid-column: 1 / -1; width: calc(50% - 12px); justify-self: center; }
-        @media (max-width: 650px) { .gallery-card-center { width: 100%; } }
+        .gallery-card h3 {
+            color: #f8fafc;
+        }
+
+        .gallery-image-button img.pos-speaker {
+            object-position: 50% 72%;
+        }
+
+        .gallery-image-button img.pos-top {
+            object-position: 50% 20%;
+        }
+
+        .gallery-card-feature {
+            grid-column: 1 / -1;
+            width: min(100%, 760px);
+            justify-self: center;
+        }
+
+        .gallery-card-feature .gallery-image-button img {
+            height: auto;
+            aspect-ratio: 16 / 9;
+        }
+
+        .gallery-card-center {
+            grid-column: 1 / -1;
+            width: calc(50% - 12px);
+            justify-self: center;
+        }
+
+        .gallery-video-link {
+            display: inline-block;
+            margin-top: 0.65rem;
+            color: #55d6c2;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .gallery-video-link:hover {
+            color: #8ef0df;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 650px) {
+            .gallery-card-center {
+                width: 100%;
+            }
+        }
     </style>
     <script src="script.js" defer></script>
 </head>
@@ -38,14 +75,14 @@
             </button>
 
             <div class="nav-links">
-                <a href="index.html" aria-current="page">Home</a>
+                <a href="index.html">Home</a>
                 <a href="research.html">Research</a>
                 <a href="publications.html">Publications</a>
                 <a href="teaching.html">Teaching</a>
                 <a href="projects.html">Projects</a>
                 <a href="committees.html">Committees</a>
                 <a href="awards.html">Awards</a>
-                <a href="gallery.html">Gallery</a>
+                <a href="gallery.html" aria-current="page">Gallery</a>
                 <a href="contact.html" class="nav-contact">Contact ↗</a>
             </div>
         </nav>
@@ -89,6 +126,12 @@
                         <span class="photo-category">ACADEMIC MILESTONE</span>
                         <h3>A Moment to Remember</h3>
                         <p>Celebrating academic achievement at Universidad Complutense de Madrid.</p>
+                        <a class="gallery-video-link"
+                           href="https://www.youtube.com/watch?v=2D4cYlYfBzw&amp;t=3407s"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Watch video at 56:47 ↗
+                        </a>
                     </figcaption>
                 </figure>
 
@@ -105,6 +148,12 @@
                         <span class="photo-category">ACADEMIC AWARD</span>
                         <h3>Doctoral Extraordinary Award</h3>
                         <p>Faculty of Informatics, Universidad Complutense de Madrid, 2023–2024.</p>
+                        <a class="gallery-video-link"
+                           href="https://www.youtube.com/watch?v=2D4cYlYfBzw&amp;t=3337s"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Watch video at 55:37 ↗
+                        </a>
                     </figcaption>
                 </figure>
 
@@ -223,7 +272,8 @@
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge Luang Prabang research visit photograph">
-                        <img class="pos-top" src="assets/MeetingLuangPrabang2024.jpeg"
+                        <img class="pos-top"
+                             src="assets/MeetingLuangPrabang2024.jpeg"
                              alt="Research visit to Luang Prabang, Laos"
                              loading="lazy">
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
@@ -270,7 +320,8 @@
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge ICCCI 2026 presentation photograph">
-                        <img class="pos-speaker" src="assets/ICCCI2026.jpeg"
+                        <img class="pos-speaker"
+                             src="assets/ICCCI2026.jpeg"
                              alt="Presenting at ICCCI 2026"
                              loading="lazy">
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
@@ -294,7 +345,7 @@
                     <figcaption>
                         <span class="photo-category">RESEARCH TALK</span>
                         <h3>Teaching Presentation</h3>
-                        <p>Presenting my candidacy for an Assistant Professor position at UCM</p>
+                        <p>Presenting my candidacy for an Assistant Professor position at UCM.</p>
                     </figcaption>
                 </figure>
 
