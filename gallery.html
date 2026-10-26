@@ -7,6 +7,20 @@
     <meta name="description" content="Academic gallery of Manuel Méndez Hurtado, featuring research conferences, awards, presentations and international collaborations.">
     <title>Gallery | Manuel Méndez Hurtado</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Títulos de las tarjetas: antes eran oscuros sobre fondo oscuro y apenas se leían */
+        .gallery-card h3 { color: #f8fafc; }
+        /* ICCCI 2026: encuadra al ponente en la franja visible de la tarjeta ancha */
+        .gallery-image-button img.pos-speaker { object-position: 50% 72%; }
+        /* Luang Prabang: muestra la parte de arriba (caras) en vez del centro */
+        .gallery-image-button img.pos-top { object-position: 50% 20%; }
+        /* Tarjeta destacada y centrada; la foto se ve completa, sin recorte */
+        .gallery-card-feature { grid-column: 1 / -1; width: min(100%, 760px); justify-self: center; }
+        .gallery-card-feature .gallery-image-button img { height: auto; aspect-ratio: 16 / 9; }
+        /* Tarjeta suelta centrada (ancho de una columna) */
+        .gallery-card-center { grid-column: 1 / -1; width: calc(50% - 12px); justify-self: center; }
+        @media (max-width: 650px) { .gallery-card-center { width: 100%; } }
+    </style>
     <script src="script.js" defer></script>
 </head>
 
@@ -65,7 +79,7 @@
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge ICCCI 2026 presentation photograph">
-                        <img src="assets/ICCCI2026.jpeg"
+                        <img class="pos-speaker" src="assets/ICCCI2026.jpeg"
                              alt="Presenting at ICCCI 2026"
                              loading="lazy">
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
@@ -74,22 +88,6 @@
                         <span class="photo-category">CONFERENCE</span>
                         <h3>ICCCI 2026</h3>
                         <p>Presenting research at the International Conference on Computational Collective Intelligence.</p>
-                    </figcaption>
-                </figure>
-
-                <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge ACIIDS 2022 conference photograph">
-                        <img src="assets/ACIIDS2022_BestPaperAward.jpg"
-                             alt="ACIIDS 2022 conference and award photograph"
-                             loading="lazy">
-                        <span class="gallery-zoom" aria-hidden="true">↗</span>
-                    </button>
-                    <figcaption>
-                        <span class="photo-category">CONFERENCE</span>
-                        <h3>ACIIDS 2022</h3>
-                        <p>14th Asian Conference on Intelligent Information and Database Systems.</p>
                     </figcaption>
                 </figure>
 
@@ -109,7 +107,7 @@
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-card gallery-card-wide">
+                <figure class="gallery-card">
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge ICCCI 2026 group photograph">
@@ -140,23 +138,7 @@
             </div>
 
             <div class="gallery-grid">
-                <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge doctoral award photograph">
-                        <img src="assets/PremioExtraordinario.jpg"
-                             alt="Doctoral Extraordinary Award ceremony at UCM"
-                             loading="lazy">
-                        <span class="gallery-zoom" aria-hidden="true">↗</span>
-                    </button>
-                    <figcaption>
-                        <span class="photo-category">ACADEMIC AWARD</span>
-                        <h3>Doctoral Extraordinary Award</h3>
-                        <p>Faculty of Informatics, Universidad Complutense de Madrid, 2023–2024.</p>
-                    </figcaption>
-                </figure>
-
-                <figure class="gallery-card">
+                <figure class="gallery-card gallery-card-feature">
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge doctoral award ceremony photograph">
@@ -176,6 +158,22 @@
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge doctoral award photograph">
+                        <img src="assets/PremioExtraordinario.jpg"
+                             alt="Doctoral Extraordinary Award ceremony at UCM"
+                             loading="lazy">
+                        <span class="gallery-zoom" aria-hidden="true">↗</span>
+                    </button>
+                    <figcaption>
+                        <span class="photo-category">ACADEMIC AWARD</span>
+                        <h3>Doctoral Extraordinary Award</h3>
+                        <p>Faculty of Informatics, Universidad Complutense de Madrid, 2023–2024.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <button class="gallery-image-button"
+                            type="button"
+                            aria-label="Enlarge doctoral award photograph">
                         <img src="assets/PremioExtraordinario3.jpeg"
                              alt="Academic award ceremony at Universidad Complutense de Madrid"
                              loading="lazy">
@@ -188,7 +186,7 @@
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-card gallery-card-wide">
+                <figure class="gallery-card">
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge PhD thesis defence photograph">
@@ -283,11 +281,11 @@
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-card gallery-card-wide">
+                <figure class="gallery-card">
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge Luang Prabang research visit photograph">
-                        <img src="assets/MeetingLuangPrabang2024.jpeg"
+                        <img class="pos-top" src="assets/MeetingLuangPrabang2024.jpeg"
                              alt="Research visit to Luang Prabang, Laos"
                              loading="lazy">
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
@@ -299,7 +297,7 @@
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-card">
+                <figure class="gallery-card gallery-card-center">
                     <button class="gallery-image-button"
                             type="button"
                             aria-label="Enlarge research visit in Laos photograph">
@@ -312,53 +310,6 @@
                         <span class="photo-category">INTERNATIONAL VISIT</span>
                         <h3>Research in Laos</h3>
                         <p>Exploring opportunities for academic collaboration.</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section class="gallery-section gallery-section-alt" id="community">
-            <div class="gallery-heading">
-                <div>
-                    <span class="gallery-kicker">04 / PEOPLE &amp; IDEAS</span>
-                    <h2>Research Community</h2>
-                    <p>
-                        The people and shared experiences that make
-                        collaborative research possible.
-                    </p>
-                </div>
-            </div>
-
-            <div class="gallery-grid">
-                <figure class="gallery-card gallery-card-wide">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge academic group photograph">
-                        <img src="assets/PhotoGroupICCCI2026.jpg"
-                             alt="Group photograph at ICCCI 2026"
-                             loading="lazy">
-                        <span class="gallery-zoom" aria-hidden="true">↗</span>
-                    </button>
-                    <figcaption>
-                        <span class="photo-category">CONFERENCE COMMUNITY</span>
-                        <h3>ICCCI 2026</h3>
-                        <p>Connecting with the international research community.</p>
-                    </figcaption>
-                </figure>
-
-                <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge research presentation group photograph">
-                        <img src="assets/TesisDoctoral.jpeg"
-                             alt="Researchers after a PhD thesis defence"
-                             loading="lazy">
-                        <span class="gallery-zoom" aria-hidden="true">↗</span>
-                    </button>
-                    <figcaption>
-                        <span class="photo-category">ACADEMIC COMMUNITY</span>
-                        <h3>Research &amp; Academia</h3>
-                        <p>Sharing milestones with colleagues and mentors.</p>
                     </figcaption>
                 </figure>
             </div>
