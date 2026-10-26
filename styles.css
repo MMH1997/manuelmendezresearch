@@ -44,8 +44,17 @@ h1 { max-width: 720px; margin-bottom: 24px; font-size: clamp(2.8rem, 5.6vw, 5.25
 .hero-links a:hover { color: var(--teal); }
 .hero-card { padding: 28px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius); background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025)); box-shadow: 0 24px 70px rgba(0,0,0,.12); }
 .profile-orbit { width: 150px; height: 150px; margin: 0 auto 26px; border-radius: 50%; display: grid; place-items: center; position: relative; background: radial-gradient(circle at 35% 25%, #31495b, #17263a 68%); border: 1px solid rgba(113,224,192,.35); }
-.profile-initials { display: grid; place-items: center; width: 92px; height: 92px; border-radius: 50%; background: var(--teal); color: var(--navy); font-family: var(--serif); font-size: 1.55rem; font-weight: 800; letter-spacing: -.07em; }
-.orbit { position: absolute; inset: -10px; border: 1px dashed rgba(113,224,192,.38); border-radius: 50%; }
+.profile-photo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 28%;
+  border: 3px solid var(--teal);
+  position: relative;
+  z-index: 1;
+}.orbit { position: absolute; inset: -10px; border: 1px dashed rgba(113,224,192,.38); border-radius: 50%; }
 .orbit-two { inset: 13px -18px; transform: rotate(55deg); border-color: rgba(255,255,255,.15); }
 .card-label { margin-bottom: 8px; color: #8f9fb2; font-size: .68rem; letter-spacing: .15em; font-weight: 700; }
 .hero-card h2 { font-size: 1.35rem; margin-bottom: 6px; color: white; }
