@@ -6,8 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="description" content="Program committee memberships and special-session organization by Manuel Méndez Hurtado.">
+  <meta name="theme-color" content="#101b2b">
 
   <title>Program Committees | Manuel Méndez Hurtado</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -45,10 +50,12 @@
 
     .committees-section h2 {
       margin: 0 0 .6rem;
+      text-align: center;
     }
 
     .committees-intro {
       margin: 0 0 1.8rem;
+      text-align: center;
     }
 
     .committee-grid {
@@ -81,7 +88,8 @@
     }
 
     .committee-card h3 {
-      margin: .55rem 0 .65rem;
+      margin: .75rem 0;
+      text-align: center;
     }
 
     .committee-card p {
@@ -112,11 +120,12 @@
       text-decoration: none;
       font-size: .88rem;
       font-weight: 700;
-      transition: background .2s ease;
+      transition: background .2s ease, border-color .2s ease;
     }
 
     .committee-link:hover {
       background: rgba(85, 214, 194, .08);
+      border-color: rgba(85, 214, 194, .6);
     }
 
     .special-session {
@@ -128,7 +137,24 @@
     }
 
     .special-session h3 {
-      margin: .55rem 0 .7rem;
+      margin: .75rem 0;
+      text-align: center;
+    }
+
+    .special-session > p {
+      max-width: 800px;
+      margin: .65rem auto;
+    }
+
+    .special-session > .committee-type {
+      display: block;
+      text-align: center;
+    }
+
+    .special-session .committee-link {
+      display: flex;
+      width: fit-content;
+      margin: 1rem auto 0;
     }
 
     @media (max-width: 700px) {
@@ -137,45 +163,57 @@
       }
 
       .committees-hero {
-        padding-top: 5.5rem;
+        padding: 5.5rem 1.25rem 3.5rem;
+      }
+
+      .committees-section {
+        padding: 2rem 1.25rem 3rem;
+      }
+
+      .special-session {
+        padding: 1.4rem;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <!-- <a class="brand" href="index.html">
-        MMH<span>.</span>
-      </a> -->
+  <!-- Navigation: consistent with the rest of the website -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark">M</span>
+        <span>Manuel Méndez Hurtado</span>
+      </a>
 
       <button
         class="menu-toggle"
-        aria-label="Toggle navigation"
-        aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        id="menu-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation">
+        ☰
       </button>
 
-      <div class="nav-links">
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
         <a href="teaching.html">Teaching</a>
         <a href="projects.html">Projects</a>
+        <a href="committees.html" aria-current="page">Committees</a>
         <a href="awards.html">Awards</a>
         <a href="gallery.html">Gallery</a>
-        <a href="committees.html" class="active" aria-current="page">Committees</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-contact">Contact ↗</a>
       </div>
 
     </nav>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- Hero -->
     <section class="committees-hero">
@@ -357,10 +395,15 @@
 
   </main>
 
+  <!-- Footer: consistent with the other pages -->
   <footer class="site-footer">
-    <p>
-      © 2026 Manuel Méndez Hurtado · Universidad Complutense de Madrid
-    </p>
+    <div class="container footer-inner">
+      <span>
+        © <span id="year">2026</span> Manuel Méndez Hurtado
+      </span>
+      <span>Universidad Complutense de Madrid</span>
+      <a href="index.html">Home ↑</a>
+    </div>
   </footer>
 
 </body>
