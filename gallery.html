@@ -4,9 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="Academic gallery of Manuel Méndez Hurtado, featuring research conferences, awards, presentations and international collaborations.">
+    <meta name="theme-color" content="#101b2b">
+
     <title>Gallery | Manuel Méndez Hurtado</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+
     <style>
         .gallery-card h3 {
             color: #f8fafc;
@@ -58,23 +67,32 @@
             }
         }
     </style>
+
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header class="site-header">
-        <nav class="nav" aria-label="Main navigation">
-            <a class="brand" href="index.html">MMH<span>.</span></a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-            <button class="menu-toggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Navigation: consistent across the website -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+
+            <a class="brand" href="index.html" aria-label="Home">
+                <span class="brand-mark">M</span>
+                <span>Manuel Méndez Hurtado</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-expanded="false"
+                aria-controls="nav-links"
+                aria-label="Open navigation">
+                ☰
             </button>
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="research.html">Research</a>
                 <a href="publications.html">Publications</a>
@@ -85,14 +103,19 @@
                 <a href="gallery.html" aria-current="page">Gallery</a>
                 <a href="contact.html" class="nav-contact">Contact ↗</a>
             </div>
+
         </nav>
     </header>
 
-    <main>
+    <main id="main">
+
+        <!-- Hero -->
         <section class="gallery-hero">
             <div class="gallery-hero-content">
                 <span class="eyebrow">BEYOND THE PAPERS</span>
+
                 <h1>Academic <span>Gallery</span></h1>
+
                 <p>
                     A collection of moments from research conferences,
                     academic milestones and international collaborations.
@@ -100,11 +123,14 @@
             </div>
         </section>
 
+        <!-- 01 / Awards and academic milestones -->
         <section class="gallery-section" id="awards">
             <div class="gallery-heading">
                 <div>
                     <span class="gallery-kicker">01 / RECOGNITION</span>
+
                     <h2>Awards &amp; Academic Milestones</h2>
+
                     <p>
                         Recognitions and important moments throughout
                         my academic career.
@@ -113,111 +139,180 @@
             </div>
 
             <div class="gallery-grid">
+
+                <!-- Doctoral award ceremony -->
                 <figure class="gallery-card gallery-card-feature">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge doctoral award ceremony photograph">
-                        <img src="assets/PremioExtraordinario2.png"
-                             alt="Doctoral award ceremony"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge doctoral award ceremony photograph">
+
+                        <img
+                            src="assets/PremioExtraordinario2.png"
+                            alt="Doctoral award ceremony"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">ACADEMIC MILESTONE</span>
+
                         <h3>A Moment to Remember</h3>
-                        <p>Celebrating academic achievement at Universidad Complutense de Madrid.</p>
-                        <a class="gallery-video-link"
-                           href="https://www.youtube.com/watch?v=2D4cYlYfBzw&amp;t=3407s"
-                           target="_blank"
-                           rel="noopener noreferrer">
+
+                        <p>
+                            Celebrating academic achievement at
+                            Universidad Complutense de Madrid.
+                        </p>
+
+                        <a
+                            class="gallery-video-link"
+                            href="https://www.youtube.com/watch?v=2D4cYlYfBzw&amp;t=3407s"
+                            target="_blank"
+                            rel="noopener noreferrer">
                             Watch video ↗
                         </a>
                     </figcaption>
                 </figure>
 
+                <!-- Doctoral Extraordinary Award -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge doctoral award photograph">
-                        <img src="assets/PremioExtraordinario.jpg"
-                             alt="Doctoral Extraordinary Award ceremony at UCM"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge doctoral award photograph">
+
+                        <img
+                            src="assets/PremioExtraordinario.jpg"
+                            alt="Doctoral Extraordinary Award ceremony at UCM"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">ACADEMIC AWARD</span>
+
                         <h3>Doctoral Extraordinary Award</h3>
-                        <p>Faculty of Informatics, Universidad Complutense de Madrid, 2023–2024.</p>
-                        <a class="gallery-video-link"
-                           href="https://www.youtube.com/watch?v=2D4cYlYfBzw&amp;t=3337s"
-                           target="_blank"
-                           rel="noopener noreferrer">
+
+                        <p>
+                            Faculty of Informatics, Universidad Complutense
+                            de Madrid, 2023–2024.
+                        </p>
+
+                        <a
+                            class="gallery-video-link"
+                            href="https://www.youtube.com/watch?v=2D4cYlYfBzw&amp;t=3337s"
+                            target="_blank"
+                            rel="noopener noreferrer">
                             Watch video ↗
                         </a>
                     </figcaption>
                 </figure>
 
+                <!-- Doctoral recognition -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge doctoral award photograph">
-                        <img src="assets/PremioExtraordinario3.jpeg"
-                             alt="Academic award ceremony at Universidad Complutense de Madrid"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge doctoral award photograph">
+
+                        <img
+                            src="assets/PremioExtraordinario3.jpeg"
+                            alt="Academic award ceremony at Universidad Complutense de Madrid"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">ACADEMIC AWARD</span>
+
                         <h3>Doctoral Recognition</h3>
-                        <p>Recognising doctoral research and academic excellence.</p>
-                        <a class="gallery-video-link"
-                           href="https://www.youtube.com/watch?v=jJOUwBsT8ig&amp;t=2276s"
-                           target="_blank"
-                           rel="noopener noreferrer">
+
+                        <p>
+                            Recognising doctoral research and academic excellence.
+                        </p>
+
+                        <a
+                            class="gallery-video-link"
+                            href="https://www.youtube.com/watch?v=jJOUwBsT8ig&amp;t=2276s"
+                            target="_blank"
+                            rel="noopener noreferrer">
                             Watch video ↗
                         </a>
                     </figcaption>
                 </figure>
 
+                <!-- PhD defence -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge PhD thesis defence photograph">
-                        <img src="assets/TesisDoctoral.jpeg"
-                             alt="PhD thesis defence in December 2023"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge PhD thesis defence photograph">
+
+                        <img
+                            src="assets/TesisDoctoral.jpeg"
+                            alt="PhD thesis defence in December 2023"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">PHD DEFENCE</span>
+
                         <h3>PhD Thesis Defence</h3>
-                        <p>Applications of deep learning and metamorphic testing to smart cities and intelligent systems — December 2023.</p>
+
+                        <p>
+                            Applications of deep learning and metamorphic
+                            testing to smart cities and intelligent systems
+                            — December 2023.
+                        </p>
                     </figcaption>
                 </figure>
 
+                <!-- ACIIDS Best Paper Award -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge Best Paper Award photograph">
-                        <img src="assets/BestPaperAwardACIIDS2022.jpg"
-                             alt="Best Regular Paper Award at ACIIDS 2022"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge Best Paper Award photograph">
+
+                        <img
+                            src="assets/BestPaperAwardACIIDS2022.jpg"
+                            alt="Best Regular Paper Award at ACIIDS 2022"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">BEST PAPER AWARD</span>
+
                         <h3>ACIIDS 2022</h3>
-                        <p>Best Regular Paper Award for research on transformer-based ozone prediction.</p>
+
+                        <p>
+                            Best Regular Paper Award for research on
+                            transformer-based ozone prediction.
+                        </p>
                     </figcaption>
                 </figure>
+
             </div>
         </section>
 
-        <section class="gallery-section gallery-section-alt" id="collaborations">
+        <!-- 02 / International collaborations -->
+        <section
+            class="gallery-section gallery-section-alt"
+            id="collaborations">
+
             <div class="gallery-heading">
                 <div>
                     <span class="gallery-kicker">02 / INTERNATIONAL RESEARCH</span>
+
                     <h2>International Collaborations</h2>
+
                     <p>
                         Research visits, scientific discussions and
                         collaborations with colleagues around the world.
@@ -226,94 +321,151 @@
             </div>
 
             <div class="gallery-grid">
+
+                <!-- Bangkok -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge Bangkok research meeting photograph">
-                        <img src="assets/MeetingBangkok2024.jpeg"
-                             alt="Research collaboration meeting in Bangkok"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge Bangkok research meeting photograph">
+
+                        <img
+                            src="assets/MeetingBangkok2024.jpeg"
+                            alt="Research collaboration meeting in Bangkok"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">THAILAND</span>
+
                         <h3>Bangkok Research Visit</h3>
-                        <p>Exchanging ideas and discussing research collaborations.</p>
+
+                        <p>
+                            Exchanging ideas and discussing research collaborations.
+                        </p>
                     </figcaption>
                 </figure>
 
+                <!-- Meeting with Professor Suphamit Chittayasothorn -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge meeting with Professor Suphamit Chittayasothorn">
-                        <img src="assets/MeetingWithProfChittayasotorm.jpg"
-                             alt="Meeting with Professor Suphamit Chittayasothorn"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge meeting with Professor Suphamit Chittayasothorn">
+
+                        <img
+                            src="assets/MeetingWithProfChittayasotorm.jpg"
+                            alt="Meeting with Professor Suphamit Chittayasothorn"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">RESEARCH COLLABORATION</span>
+
                         <h3>Scientific Exchange</h3>
-                        <p>Meeting with Professor Suphamit Chittayasothorn and colleagues.</p>
+
+                        <p>
+                            Meeting with Professor Suphamit Chittayasothorn
+                            and colleagues.
+                        </p>
                     </figcaption>
                 </figure>
 
+                <!-- Collaborative research meeting -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge research meeting photograph">
-                        <img src="assets/MeetingWithProfChittayasotorm2.jpg"
-                             alt="Research meeting with international colleagues"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge research meeting photograph">
+
+                        <img
+                            src="assets/MeetingWithProfChittayasotorm2.jpg"
+                            alt="Research meeting with international colleagues"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">RESEARCH MEETING</span>
+
                         <h3>Collaborative Research</h3>
-                        <p>Discussing research ideas and future collaborations.</p>
+
+                        <p>
+                            Discussing research ideas and future collaborations.
+                        </p>
                     </figcaption>
                 </figure>
 
+                <!-- Luang Prabang -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge Luang Prabang research visit photograph">
-                        <img class="pos-top"
-                             src="assets/MeetingLuangPrabang2024.jpeg"
-                             alt="Research visit to Luang Prabang, Laos"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge Luang Prabang research visit photograph">
+
+                        <img
+                            class="pos-top"
+                            src="assets/MeetingLuangPrabang2024.jpeg"
+                            alt="Research visit to Luang Prabang, Laos"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">LAOS</span>
+
                         <h3>Luang Prabang</h3>
-                        <p>Research visit and exchange with international colleagues.</p>
+
+                        <p>
+                            Research visit and exchange with international colleagues.
+                        </p>
                     </figcaption>
                 </figure>
 
+                <!-- Research in Laos -->
                 <figure class="gallery-card gallery-card-center">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge research visit in Laos photograph">
-                        <img src="assets/MNuñez_Laos.jpeg"
-                             alt="Research visit in Laos"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge research visit in Laos photograph">
+
+                        <img
+                            src="assets/MNuñez_Laos.jpeg"
+                            alt="Research visit in Laos"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">INTERNATIONAL VISIT</span>
+
                         <h3>Research in Laos</h3>
-                        <p>Exploring opportunities for academic collaboration.</p>
+
+                        <p>
+                            Exploring opportunities for academic collaboration.
+                        </p>
                     </figcaption>
                 </figure>
+
             </div>
         </section>
 
+        <!-- 03 / Conferences and presentations -->
         <section class="gallery-section" id="conferences">
+
             <div class="gallery-heading">
                 <div>
                     <span class="gallery-kicker">03 / KNOWLEDGE SHARING</span>
+
                     <h2>Conferences &amp; Presentations</h2>
+
                     <p>
                         Sharing research, presenting results and engaging
                         with the scientific community.
@@ -322,90 +474,147 @@
             </div>
 
             <div class="gallery-grid">
+
+                <!-- ICCCI 2026 presentation -->
                 <figure class="gallery-card gallery-card-wide">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge ICCCI 2026 presentation photograph">
-                        <img class="pos-speaker"
-                             src="assets/ICCCI2026.jpeg"
-                             alt="Presenting at ICCCI 2026"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge ICCCI 2026 presentation photograph">
+
+                        <img
+                            class="pos-speaker"
+                            src="assets/ICCCI2026.jpeg"
+                            alt="Presenting at ICCCI 2026"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">CONFERENCE</span>
+
                         <h3>ICCCI 2026</h3>
-                        <p>Presenting research at the International Conference on Computational Collective Intelligence.</p>
+
+                        <p>
+                            Presenting research at the International Conference
+                            on Computational Collective Intelligence.
+                        </p>
                     </figcaption>
                 </figure>
 
+                <!-- UCM presentation -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge research presentation photograph">
-                        <img src="assets/Presentacion_Plaza.jpeg"
-                             alt="Research presentation at Universidad Complutense de Madrid"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge research presentation photograph">
+
+                        <img
+                            src="assets/Presentacion_Plaza.jpeg"
+                            alt="Research presentation at Universidad Complutense de Madrid"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">RESEARCH TALK</span>
+
                         <h3>Teaching Presentation</h3>
-                        <p>Presenting my candidacy for an Assistant Professor position at UCM.</p>
+
+                        <p>
+                            Presenting my candidacy for an Assistant Professor
+                            position at UCM.
+                        </p>
                     </figcaption>
                 </figure>
 
+                <!-- ICCCI 2026 group photograph -->
                 <figure class="gallery-card">
-                    <button class="gallery-image-button"
-                            type="button"
-                            aria-label="Enlarge ICCCI 2026 group photograph">
-                        <img src="assets/PhotoGroupICCCI2026.jpg"
-                             alt="Researchers and participants at ICCCI 2026"
-                             loading="lazy">
+                    <button
+                        class="gallery-image-button"
+                        type="button"
+                        aria-label="Enlarge ICCCI 2026 group photograph">
+
+                        <img
+                            src="assets/PhotoGroupICCCI2026.jpg"
+                            alt="Researchers and participants at ICCCI 2026"
+                            loading="lazy">
+
                         <span class="gallery-zoom" aria-hidden="true">↗</span>
                     </button>
+
                     <figcaption>
                         <span class="photo-category">RESEARCH COMMUNITY</span>
+
                         <h3>ICCCI 2026 Community</h3>
-                        <p>Meeting researchers and colleagues at the conference.</p>
+
+                        <p>
+                            Meeting researchers and colleagues at the conference.
+                        </p>
                     </figcaption>
                 </figure>
+
             </div>
         </section>
 
+        <!-- Closing section -->
         <section class="gallery-closing">
             <p class="eyebrow">RESEARCH IS A COLLECTIVE EFFORT</p>
+
             <h2>Ideas grow through collaboration.</h2>
+
             <a class="gallery-contact-link" href="contact.html">
                 Get in touch <span aria-hidden="true">→</span>
             </a>
         </section>
+
     </main>
 
-    <div class="gallery-lightbox"
-         role="dialog"
-         aria-modal="true"
-         aria-label="Enlarged photograph"
-         aria-hidden="true">
-        <button class="lightbox-close"
-                type="button"
-                aria-label="Close enlarged photograph">×</button>
-        <button class="lightbox-prev"
-                type="button"
-                aria-label="Previous photograph">‹</button>
+    <!-- Image lightbox -->
+    <div
+        class="gallery-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Enlarged photograph"
+        aria-hidden="true">
+
+        <button
+            class="lightbox-close"
+            type="button"
+            aria-label="Close enlarged photograph">×</button>
+
+        <button
+            class="lightbox-prev"
+            type="button"
+            aria-label="Previous photograph">‹</button>
+
         <figure>
             <img src="" alt="">
             <figcaption></figcaption>
         </figure>
-        <button class="lightbox-next"
-                type="button"
-                aria-label="Next photograph">›</button>
+
+        <button
+            class="lightbox-next"
+            type="button"
+            aria-label="Next photograph">›</button>
     </div>
 
+    <!-- Footer: consistent with the rest of the website -->
     <footer class="site-footer">
-        <p>© 2026 Manuel Méndez Hurtado · Universidad Complutense de Madrid</p>
+        <div class="container footer-inner">
+            <span>
+                © <span id="year">2026</span> Manuel Méndez Hurtado
+            </span>
+
+            <span>Universidad Complutense de Madrid</span>
+
+            <a href="index.html">Home ↑</a>
+        </div>
     </footer>
 
+    <!-- Gallery lightbox functionality -->
     <script>
     (() => {
         const lightbox = document.querySelector(".gallery-lightbox");
@@ -416,29 +625,39 @@
         const closeButton = lightbox.querySelector(".lightbox-close");
         const previousButton = lightbox.querySelector(".lightbox-prev");
         const nextButton = lightbox.querySelector(".lightbox-next");
-        const imageButtons = [...document.querySelectorAll(".gallery-image-button")];
+
+        const imageButtons = [
+            ...document.querySelectorAll(".gallery-image-button")
+        ];
 
         let currentIndex = 0;
         let lastFocusedElement = null;
 
         function showImage(index) {
-            currentIndex = (index + imageButtons.length) % imageButtons.length;
+            currentIndex =
+                (index + imageButtons.length) % imageButtons.length;
+
             const button = imageButtons[currentIndex];
             const image = button.querySelector("img");
             const figure = button.closest("figure");
 
             lightboxImage.src = image.src;
             lightboxImage.alt = image.alt;
+
             lightboxCaption.textContent =
-                figure.querySelector("figcaption h3")?.textContent || image.alt;
+                figure.querySelector("figcaption h3")?.textContent
+                || image.alt;
         }
 
         function openLightbox(index) {
             lastFocusedElement = document.activeElement;
+
             showImage(index);
+
             lightbox.classList.add("is-open");
             lightbox.setAttribute("aria-hidden", "false");
             document.body.classList.add("lightbox-open");
+
             closeButton.focus();
         }
 
@@ -446,31 +665,53 @@
             lightbox.classList.remove("is-open");
             lightbox.setAttribute("aria-hidden", "true");
             document.body.classList.remove("lightbox-open");
+
             lightboxImage.src = "";
 
-            if (lastFocusedElement) lastFocusedElement.focus();
+            if (lastFocusedElement) {
+                lastFocusedElement.focus();
+            }
         }
 
         imageButtons.forEach((button, index) => {
-            button.addEventListener("click", () => openLightbox(index));
+            button.addEventListener("click", () => {
+                openLightbox(index);
+            });
         });
 
         closeButton.addEventListener("click", closeLightbox);
-        previousButton.addEventListener("click", () => showImage(currentIndex - 1));
-        nextButton.addEventListener("click", () => showImage(currentIndex + 1));
+
+        previousButton.addEventListener("click", () => {
+            showImage(currentIndex - 1);
+        });
+
+        nextButton.addEventListener("click", () => {
+            showImage(currentIndex + 1);
+        });
 
         lightbox.addEventListener("click", event => {
-            if (event.target === lightbox) closeLightbox();
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
         });
 
         document.addEventListener("keydown", event => {
             if (!lightbox.classList.contains("is-open")) return;
 
-            if (event.key === "Escape") closeLightbox();
-            if (event.key === "ArrowLeft") showImage(currentIndex - 1);
-            if (event.key === "ArrowRight") showImage(currentIndex + 1);
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+
+            if (event.key === "ArrowLeft") {
+                showImage(currentIndex - 1);
+            }
+
+            if (event.key === "ArrowRight") {
+                showImage(currentIndex + 1);
+            }
         });
     })();
     </script>
+
 </body>
 </html>
