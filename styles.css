@@ -1920,6 +1920,16 @@ body.lightbox-open {
   list-style: none;
 }
 
+.travel-events a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.travel-events a:hover {
+  color: #fff;
+}
+
 .travel-date {
   display: block;
   margin-bottom: 1px;
