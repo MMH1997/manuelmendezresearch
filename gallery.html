@@ -25,8 +25,16 @@
             object-position: 50% 72%;
         }
 
-        .gallery-image-button img.pos-paris {
-            object-position: 50% 36%;
+        /* Portrait photo: shown whole (no cropping) in a narrower card */
+        .gallery-card-portrait {
+            grid-column: 1 / -1;
+            width: min(100%, 340px);
+            justify-self: center;
+        }
+
+        .gallery-card-portrait .gallery-image-button img {
+            height: auto;
+            aspect-ratio: 3 / 4;
         }
 
         .gallery-image-button img.pos-top {
@@ -466,14 +474,13 @@
                 </figure>
 
                 <!-- Research stay at Montimage, Paris -->
-                <figure class="gallery-card gallery-card-center">
+                <figure class="gallery-card gallery-card-portrait">
                     <button
                         class="gallery-image-button"
                         type="button"
                         aria-label="Enlarge Paris research stay photograph">
 
                         <img
-                            class="pos-paris"
                             src="assets/MontimageParis.jpg"
                             alt="The Eiffel Tower in Paris during a research stay at Montimage"
                             loading="lazy">
