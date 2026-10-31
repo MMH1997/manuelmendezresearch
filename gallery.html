@@ -25,16 +25,18 @@
             object-position: 50% 72%;
         }
 
-        /* Portrait photo: shown whole (no cropping) in a narrower card */
-        .gallery-card-portrait {
-            grid-column: 1 / -1;
-            width: min(100%, 340px);
-            justify-self: center;
+        /* Two portrait photos side by side: square crops focused on the people */
+        .gallery-card-pair .gallery-image-button img {
+            height: auto;
+            aspect-ratio: 1 / 1;
         }
 
-        .gallery-card-portrait .gallery-image-button img {
-            height: auto;
-            aspect-ratio: 3 / 4;
+        .gallery-image-button img.pos-laos {
+            object-position: 50% 62%;
+        }
+
+        .gallery-image-button img.pos-paris {
+            object-position: 50% 97%;
         }
 
         .gallery-image-button img.pos-top {
@@ -448,13 +450,14 @@
                 </figure>
 
                 <!-- Research in Laos -->
-                <figure class="gallery-card gallery-card-center">
+                <figure class="gallery-card gallery-card-pair">
                     <button
                         class="gallery-image-button"
                         type="button"
                         aria-label="Enlarge research visit in Laos photograph">
 
                         <img
+                            class="pos-laos"
                             src="assets/MNuñez_Laos.jpeg"
                             alt="Manuel Méndez Hurtado with Manuel Núñez at ICEAST 2024 in Luang Prabang, Laos, May 2024"
                             loading="lazy">
@@ -474,13 +477,14 @@
                 </figure>
 
                 <!-- Research stay at Montimage, Paris -->
-                <figure class="gallery-card gallery-card-portrait">
+                <figure class="gallery-card gallery-card-pair">
                     <button
                         class="gallery-image-button"
                         type="button"
                         aria-label="Enlarge Paris research stay photograph">
 
                         <img
+                            class="pos-paris"
                             src="assets/MontimageParis.jpg"
                             alt="The Eiffel Tower in Paris during a research stay at Montimage"
                             loading="lazy">
