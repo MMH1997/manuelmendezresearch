@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mmh1997.github.io/manuelmendezresearch/sitemap.xml

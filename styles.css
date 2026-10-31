@@ -529,7 +529,7 @@ h1 {
 
 .publication {
   display: grid;
-  grid-template-columns: 75px 1fr 44px;
+  grid-template-columns: 75px 1fr;
   gap: 25px;
   padding: 27px 0;
   border-bottom: 1px solid var(--line);
@@ -569,23 +569,6 @@ h1 {
   color: #8b95a3;
   font-size: .8rem;
   margin-bottom: 0;
-}
-
-.pub-arrow {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  color: var(--teal-dark);
-  font-size: 1.15rem;
-}
-
-.pub-arrow:hover {
-  background: var(--navy);
-  color: white;
-  border-color: var(--navy);
 }
 
 .publication-placeholder {
@@ -1043,13 +1026,8 @@ h1 {
   }
 
   .publication {
-    grid-template-columns: 46px 1fr 36px;
+    grid-template-columns: 46px 1fr;
     gap: 12px;
-  }
-
-  .pub-arrow {
-    width: 34px;
-    height: 34px;
   }
 
   .contact-grid {
@@ -1114,7 +1092,7 @@ h1 {
   }
 
   .publication {
-    grid-template-columns: 1fr 34px;
+    grid-template-columns: 1fr;
   }
 
   .pub-year {
@@ -1124,11 +1102,6 @@ h1 {
 
   .pub-content {
     grid-column: 1;
-  }
-
-  .pub-arrow {
-    grid-column: 2;
-    grid-row: 2;
   }
 
   .contact-panel {
