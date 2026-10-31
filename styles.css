@@ -1920,6 +1920,24 @@ body.lightbox-open {
   list-style: none;
 }
 
+.inline-paper-link {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.inline-paper-link:hover {
+  color: #fff;
+}
+
+.award-card .inline-paper-link {
+  color: #0b7a6b;
+}
+
+.award-card .inline-paper-link:hover {
+  color: #0f172a;
+}
+
 .travel-events a {
   color: var(--teal);
   text-decoration: underline;
