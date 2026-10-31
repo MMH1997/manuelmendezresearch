@@ -86,32 +86,6 @@
             white-space: nowrap;
         }
 
-        .publication-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .publication .pub-authors {
-            margin: 0.45rem 0;
-            color: #64748b;
-            font-size: 0.86rem;
-            line-height: 1.65;
-        }
-
-        .publication .pub-venue {
-            line-height: 1.7;
-        }
-
-        .publication h3 a {
-            text-decoration-thickness: 1px;
-            text-underline-offset: 4px;
-            transition: color 0.2s ease;
-        }
-
-        .publication h3 a:hover {
-            color: #149d91;
-        }
-
         .publication-group-heading + .publication-list {
             margin-top: 0;
         }
@@ -757,6 +731,21 @@
           "pagination": "299–312",
           "pageStart": "299",
           "pageEnd": "312"
+        },
+        {
+          "@type": "Thesis",
+          "name": "Aplicaciones de deep learning y metamorphic testing al ámbito de las ciudades y sistemas inteligentes",
+          "alternateName": "Applications of deep learning and metamorphic testing to smart cities and intelligent systems",
+          "author": {
+            "@id": "https://mmh1997.github.io/manuelmendezresearch/#person"
+          },
+          "datePublished": "2023",
+          "url": "https://produccioncientifica.ucm.es/documentos/67895f5463972c4a4c5979fa",
+          "inLanguage": "es",
+          "publisher": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad Complutense de Madrid"
+          }
         }
       ]
     }
@@ -811,6 +800,17 @@
                     </p>
                 </div>
 
+                <div class="pub-filters" role="group" aria-label="Filter publications by topic" data-pub-filters>
+                    <span class="pub-filters-label">Filter by topic</span>
+                    <button type="button" class="pub-filter" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="pub-filter" data-filter="testing" aria-pressed="false">Software testing</button>
+                    <button type="button" class="pub-filter" data-filter="xai" aria-pressed="false">Explainable AI</button>
+                    <button type="button" class="pub-filter" data-filter="anomaly" aria-pressed="false">Anomaly detection</button>
+                    <button type="button" class="pub-filter" data-filter="trust" aria-pressed="false">Trustworthy ML &amp; security</button>
+                    <button type="button" class="pub-filter" data-filter="applied" aria-pressed="false">ML applications</button>
+                </div>
+                <p class="pub-filter-status" id="pub-filter-status" role="status" aria-live="polite"></p>
+
                 <div class="publication-collections">
 
                     <!-- JOURNAL ARTICLES -->
@@ -838,7 +838,7 @@
                         <div class="publication-list">
 
                             <!-- 2026 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="applied">
                                 <div class="pub-year">2026</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Journal article</p>
@@ -859,7 +859,7 @@
                                 </div>
                             </article>
 
-                            <article class="publication">
+                            <article class="publication" data-topics="applied">
                                 <div class="pub-year">2026</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Journal article</p>
@@ -882,7 +882,7 @@
                             </article>
 
                             <!-- 2025 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="applied">
                                 <div class="pub-year">2025</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Journal article</p>
@@ -905,7 +905,7 @@
                             </article>
 
                             <!-- 2024 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="testing applied">
                                 <div class="pub-year">2024</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Journal article</p>
@@ -929,7 +929,7 @@
                             </article>
 
                             <!-- 2023 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="applied">
                                 <div class="pub-year">2023</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Journal article · Survey</p>
@@ -951,7 +951,7 @@
                                 </div>
                             </article>
 
-                            <article class="publication">
+                            <article class="publication" data-topics="applied">
                                 <div class="pub-year">2023</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Journal article</p>
@@ -973,7 +973,7 @@
                                 </div>
                             </article>
 
-                            <article class="publication">
+                            <article class="publication" data-topics="testing">
                                 <div class="pub-year">2023</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Journal article</p>
@@ -1023,7 +1023,7 @@
                         <div class="publication-list">
 
                             <!-- 2027 publication / ARES 2026 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="trust">
                                 <div class="pub-year">2027</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Cybersecurity</p>
@@ -1048,7 +1048,7 @@
                             </article>
 
                             <!-- 2026 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="trust">
                                 <div class="pub-year">2026</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Fairness and robustness</p>
@@ -1071,7 +1071,7 @@
                                 </div>
                             </article>
 
-                            <article class="publication">
+                            <article class="publication" data-topics="xai">
                                 <div class="pub-year">2026</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Explainable AI</p>
@@ -1095,7 +1095,7 @@
                             </article>
 
                             <!-- 2024 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="testing">
                                 <div class="pub-year">2024</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Software testing</p>
@@ -1118,7 +1118,7 @@
                                 </div>
                             </article>
 
-                            <article class="publication">
+                            <article class="publication" data-topics="testing trust">
                                 <div class="pub-year">2024</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Metamorphic testing</p>
@@ -1142,7 +1142,7 @@
                             </article>
 
                             <!-- 2023 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="applied">
                                 <div class="pub-year">2023</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Sports analytics</p>
@@ -1166,7 +1166,7 @@
                             </article>
 
                             <!-- 2022 -->
-                            <article class="publication">
+                            <article class="publication" data-topics="applied">
                                 <div class="pub-year">2022</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Air quality forecasting</p>
@@ -1186,10 +1186,11 @@
                                         Lecture Notes in Artificial Intelligence,
                                         vol. 13757, 169–182.
                                     </p>
+                                    <p class="pub-note">Best Regular Paper Award, ACIIDS 2022</p>
                                 </div>
                             </article>
 
-                            <article class="publication">
+                            <article class="publication" data-topics="anomaly applied">
                                 <div class="pub-year">2022</div>
                                 <div class="pub-content">
                                     <p class="pub-type">Conference paper · Anomaly detection</p>
@@ -1212,6 +1213,52 @@
                                 </div>
                             </article>
 
+                        </div>
+                    </section>
+
+                    <!-- DOCTORAL THESIS -->
+                    <section class="publication-group" id="doctoral-thesis"
+                             aria-labelledby="thesis-heading">
+
+                        <div class="publication-group-heading">
+                            <div class="publication-group-icon"
+                                 aria-hidden="true">▣</div>
+
+                            <div>
+                                <span class="publication-group-kicker">
+                                    Universidad Complutense de Madrid
+                                </span>
+                                <h2 id="thesis-heading">Doctoral Thesis</h2>
+                                <p>
+                                    PhD thesis defended in December 2023.
+                                </p>
+                            </div>
+
+                            <span class="publication-count">1 thesis</span>
+                        </div>
+
+                        <div class="publication-list">
+                            <article class="publication" data-topics="testing applied">
+                                <div class="pub-year">2023</div>
+                                <div class="pub-content">
+                                    <p class="pub-type">Doctoral thesis · Smart cities</p>
+                                    <h3>
+                                        <a href="https://produccioncientifica.ucm.es/documentos/67895f5463972c4a4c5979fa"
+                                           target="_blank"
+                                           rel="noopener noreferrer">
+                                            Aplicaciones de deep learning y metamorphic testing al ámbito de las ciudades y sistemas inteligentes
+                                        </a>
+                                    </h3>
+                                    <p class="pub-authors">
+                                        Manuel Méndez Hurtado.
+                                    </p>
+                                    <p class="pub-venue">
+                                        PhD thesis, Universidad Complutense de Madrid.
+                                        English title: <em>Applications of deep learning and metamorphic testing to smart cities and intelligent systems</em>.
+                                    </p>
+                                    <p class="pub-note">Premio Extraordinario de Doctorado, 2023–2024</p>
+                                </div>
+                            </article>
                         </div>
                     </section>
                 </div>
