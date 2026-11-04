@@ -12,6 +12,8 @@ Static multi-page academic website for GitHub Pages.
 - `contact.html`: contact details and academic profiles
 - `styles.css`: shared styling
 - `script.js`: mobile navigation and footer year
+- `citations.js`: Google Scholar metrics widget (reads `data/citations.json`)
+- `scripts/update_citations.py` and `.github/workflows/update-citations.yml`: daily job that refreshes `data/citations.json`
 - `assets/`: portrait and award images
 
 ## Publish on GitHub Pages
@@ -29,3 +31,10 @@ The HTML expects:
 - `assets/ACIIDS2022_BestPaperAward.jpg`
 
 Keep those filenames exactly, or update the corresponding `src` and `href` attributes in the HTML.
+
+## Google Scholar widget
+The widget on the home page and on Publications shows citations, h-index, i10-index and citations per year.
+A GitHub Action (`Update Google Scholar citations`) runs every day, reads the public Scholar profile and commits `data/citations.json`.
+You can also run it by hand from the **Actions** tab (**Run workflow**).
+If Google blocks the request, add a free SerpApi key as a repository secret named `SERPAPI_KEY` (Settings → Secrets and variables → Actions) and the job uses it as a fallback.
+Until `data/citations.json` exists, the widget stays hidden.
