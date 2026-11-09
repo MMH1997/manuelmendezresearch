@@ -1,0 +1,28 @@
+{
+  "source": "Google Scholar",
+  "profile": "https://scholar.google.com/citations?user=avZSGS0AAAAJ",
+  "checked": "2026-11-09",
+  "citations": 807,
+  "citationsRecent": 805,
+  "recentSince": 2021,
+  "hIndex": 6,
+  "i10Index": 4,
+  "byYear": [
+    {
+      "year": 2023,
+      "citations": 76
+    },
+    {
+      "year": 2024,
+      "citations": 214
+    },
+    {
+      "year": 2025,
+      "citations": 283
+    },
+    {
+      "year": 2026,
+      "citations": 226
+    }
+  ]
+}
