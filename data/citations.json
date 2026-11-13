@@ -1,7 +1,7 @@
 {
   "source": "Google Scholar",
   "profile": "https://scholar.google.com/citations?user=avZSGS0AAAAJ",
-  "checked": "2026-11-11",
+  "checked": "2026-11-13",
   "citations": 807,
   "citationsRecent": 805,
   "recentSince": 2021,
@@ -18,11 +18,11 @@
     },
     {
       "year": 2025,
-      "citations": 283
+      "citations": 284
     },
     {
       "year": 2026,
-      "citations": 226
+      "citations": 225
     }
   ]
 }
